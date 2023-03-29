@@ -1,0 +1,7 @@
+{
+    "ContactList": [
+        {"FullName": "Jasim", "ContactNumber":"4165555555","EmailAddress":"jasim@gmai.com"},
+        {"FullName": "Tom", "ContactNumber":"4165551234","EmailAddress":"tom@gmai.com"},
+        {"FullName": "Jerry", "ContactNumber":"4165555678","EmailAddress":"jerry@gmai.com"}
+    ]
+}
