@@ -11,11 +11,18 @@
      {
              console.log("App started!!");
 
-      
+            let contactlist;
 
              $.getJSON("./Data/contacts.json",function(DataSource){
-                console.log(DataSource);
+                //get data from datasource
+                contactlist = DataSource.ContactList;
+
+                //load data into objects
+                let contact = new Contact();
+                console.log(contact.toString());
              });
+            
+             
      }
 
    
