@@ -76,20 +76,21 @@ class Contact
      */
     public toJSON():string
     {
-        return `${this.FullName}, ${this.ContactNumber}, ${this.emailAddress}`;
+        return `${this.FullName},${this.ContactNumber},${this.emailAddress}`;
     }
     /**
      *This method reads data from comma seperated list and 
      assigns it to class data members
      *
-     * @param {*} data
+     * @param {string} data
      * @memberof Contact
      */
-    public fromJSON(data: any) : void
+    public fromJSON(data: string) : void
     {
-        this.FullName = data.FullName;
-        this.ContactNumber = data.ContactNumber;
-        this.EmailAddress = data.EmailAddress;
+        let stringArray: string[] = data.split(",");
+        this.FullName = stringArray[0]
+        this.ContactNumber = stringArray[1];
+        this.EmailAddress = stringArray[2];
     }
 
     //private methods
