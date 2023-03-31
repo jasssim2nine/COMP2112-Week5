@@ -9,9 +9,10 @@
         $.getJSON("./Data/contacts.json", function (DataSource) {
             //get data from datasource
             contactlist = DataSource.ContactList;
-            //load data into objects
-            let contact = new Contact();
-            console.log(contact.toString());
+            for (const contact of contactlist) {
+                let newContact = new Contact(contact.FullName, contact.ContactNumber, contact.EmailAddress);
+                console.log(newContact.toString());
+            }
         });
     }
     window.addEventListener("load", Start);
